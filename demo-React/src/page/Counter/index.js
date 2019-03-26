@@ -22,6 +22,7 @@ class Counter extends Component {
 }
 const mapStateToProps = state => {
   console.log('state',state);
+  // state 是整个状态树
   // 注意 counterState 字段值取自 /redux/reducers 内合并状态树时的属性值
   return {
     counterState: state.counterState

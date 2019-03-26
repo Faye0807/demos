@@ -3,7 +3,8 @@ module.exports = {
   // server
   devServer: {
     contentBase: path.join(__dirname, './dist'),
-    hot: true
+    hot: true,
+    open: true
   },
   // 入口
   entry: [
