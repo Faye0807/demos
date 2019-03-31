@@ -6,7 +6,7 @@ module.exports = {
     hot: true,
     open: true
   },
-  // 入口
+  // 入口 把两个不相干的文件打包成一个js
   entry: [
     'react-hot-loader/patch',
     path.join(__dirname, 'src/index.js')
