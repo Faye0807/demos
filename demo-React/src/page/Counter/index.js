@@ -7,7 +7,7 @@ class Counter extends Component {
     super(props);
     console.log(this.props);
     this.state = {num: 0};
-    this.add = this.add.bind(this);
+    // this.add = this.add.bind(this);
   }
   add() {
     const {num} = this.state;
@@ -25,7 +25,7 @@ class Counter extends Component {
         <button onClick={() => {this.props.decrement()}}>DELETE</button>
         <button onClick={() => {this.props.reset()}}>RESET</button>
         <hr/>
-        <NumTest num={num} add={this.add} />
+        <NumTest num={num} add={() => {this.add()}} />
       </div>
     )
   }
