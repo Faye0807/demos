@@ -13,7 +13,7 @@ import getRouter from './router/router';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-
+// 让所有组件都可以访问 store
 renderWithHotLoad(getRouter());
 
 // 处理热更新 【只更新修改处而非刷新整个页面】
