@@ -1,21 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, history } from 'react-router-dom';
 import Home from '@page/Home';
-import Counter from '@page/Counter/index';
+import Counter from '@page/Counter';
 
 export default function getRoute() {
   return (
-    <BrowserRouter>
-      <div>
-        <ul>
-          <li><Link to="/">首页</Link></li>
-          <li><Link to="/Counter">计数器</Link></li>
-        </ul>
+    <BrowserRouter history={history}>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Counter" component={Counter} />
+          <Route exact path="/counter" component={Counter} />
         </Switch>
-      </div>
     </BrowserRouter>
   );
 }

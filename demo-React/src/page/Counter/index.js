@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { increment, decrement, reset} from '@actions/counter';
 import NumTest from '@component/NumTest';
+import Header from '@component/Header/index';
 class Counter extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
+    // console.log(this.props);
     this.state = {num: 0};
     // this.add = this.add.bind(this);
   }
@@ -20,6 +21,7 @@ class Counter extends Component {
     const {num} = this.state;
     return (
       <div className="outer">
+        <Header>Counter</Header>
         <p>当前值： {counterState.count}</p>
         <button onClick={() => {this.props.incrementProps()}}>ADD</button>
         <button onClick={() => {this.props.decrement()}}>DELETE</button>
@@ -31,7 +33,7 @@ class Counter extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log('state',state);
+  // console.log('state',state);
   // state 是整个状态树
   // 注意 counterState 字段值取自 /redux/reducers 内合并状态树时的属性值
   return {

@@ -5,7 +5,7 @@ const initState = {
 }
 
 export default function reducer(state = initState, action) {
-  console.log(state, action);
+  // console.log(state, action);
   switch(action.type) {
     case ADD:
       return {

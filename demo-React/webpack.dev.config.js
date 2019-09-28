@@ -21,7 +21,12 @@ module.exports = {
       test: /.js$/,
       use: ['babel-loader?cacheDirectory=true'],
       include: path.join(__dirname, 'src')
-    }]
+    }],
+    // rules: [{
+    //   test: /.scss$/,
+    //   use: ['style-loader'],
+    //   include: path.join(__dirname, 'src')
+    // }]
   },
   resolve: {
     alias: {
