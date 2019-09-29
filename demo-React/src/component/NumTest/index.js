@@ -9,6 +9,8 @@ export default class Num extends Component{
   componentWillReceiveProps(newProps) {
     // console.log('~~~~~~~~~~', newProps);
   }
+  // 每次生成一个styledComponent都会在
+  // Head内插入对应样式；而之前生成的样式仍然保留不清除【对于单页面应用】
   getFather() {
     const P = styled.p`
       color: red;
