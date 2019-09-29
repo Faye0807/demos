@@ -2,10 +2,9 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { increment, decrement, reset} from '@actions/counter';
 import NumTest from '@component/NumTest';
-console.log('NumTest', NumTest);
 // 而这种引入的方式 ComponentId 和className的值 在定义时已经生成 是不会在变了
 // className不变意味着 Head style里面样式是一直保持不增不减
-import Header from '@component/Header/index';
+import Header from '@component/styledComponents/Header/index';
 class Counter extends Component {
   constructor(props) {
     super(props);
@@ -24,11 +23,6 @@ class Counter extends Component {
       <div className="outer">
         <Header>Counter</Header>
         <p>当前值： {counterState.count}</p>
-        <button onClick={() => {this.props.incrementProps()}}>ADD</button>
-        <button onClick={() => {this.props.decrement()}}>DELETE</button>
-        <button onClick={() => {this.props.reset()}}>RESET</button>
-        <hr/>
-        <NumTest num={num} add={() => {this.add()}} />
       </div>
     )
   }
